@@ -1,0 +1,5 @@
+.containerNavbar{
+    background-color: rgb(228, 196, 136);
+    display: flex;
+    justify-content: space-between;
+}
