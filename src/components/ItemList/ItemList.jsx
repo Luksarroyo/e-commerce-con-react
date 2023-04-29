@@ -7,6 +7,8 @@ import {
   Typography,
 } from "@mui/material";
 
+import { Link } from "react-router-dom";
+
 const ItemList = ({ items }) => {
   return (
     <div
@@ -19,9 +21,9 @@ const ItemList = ({ items }) => {
     >
       {items.map((item) => {
         return (
-          <Card sx={{ Width: 345, height: 350 }} key={item.id}>
+          <Card sx={{ Width: 345, height: 400 }} key={item.id}>
             <CardMedia
-              sx={{ height: 150 }}
+              sx={{ height: 100 }}
               image={item.img}
               title={item.title}
             />
@@ -29,17 +31,19 @@ const ItemList = ({ items }) => {
               <Typography gutterBottom size="small" component="div">
                 {item.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography size="small" color="black">
                 {item.description}
               </Typography>
               <Typography variant="body2" color="orange">
-                {item.price}
+                $ {item.price}
               </Typography>
             </CardContent>
-            <CardActions style={{ height: 200 }}>
-              <Button variant="contained" size="small">
-                Comprar
-              </Button>
+            <CardActions style={{ height: 50 }}>
+              <Link to={'/ItemDetail/${item.id}'}>
+                <Button variant="contained" size="small">
+                  Comprar
+                </Button>
+              </Link>
             </CardActions>
           </Card>
         );
@@ -49,3 +53,7 @@ const ItemList = ({ items }) => {
 };
 
 export default ItemList;
+
+
+
+//dejo en 1:22
