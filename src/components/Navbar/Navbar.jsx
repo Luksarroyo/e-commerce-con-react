@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <div>
       <div className={styles.containerNavbar}>
-        <Link to="/">
+        <Link to="/category/zapatillas">
           <img
             src="https://res.cloudinary.com/dhk4b7fdq/image/upload/v1680575392/images_jzulml-media_lib_thumb_euqulu.png"
             alt="Este es el logo de la empresa"
@@ -15,9 +15,9 @@ export const Navbar = () => {
         </Link>
 
         <ul style={{ display: "flex", gap: "20px", alignItems: "end" }}>
-          <li>Zapatillas</li>
-          <li>Indumentaria</li>
-          <li>Accesorios</li>
+          <Link to="/category/zapatillas">Zapatillas</Link>
+          <Link to="/category/indumentaria">Indumentaria</Link>
+          <Link to="/category/accesorios">Accesorios</Link>
         </ul>
         <CarWidget />
       </div>

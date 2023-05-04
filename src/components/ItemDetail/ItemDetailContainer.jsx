@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from "react"
-import {ItemDetail} from "./ItemDetail"
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { ItemDetail } from "./ItemDetail";
 import { products } from "../../productsMock";
+import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
-    const[product, setProduct] = useState ({});
+  const [product, setProduct] = useState({});
 
-    const {id} = useParams()
+  const { id } = useParams();
 
-    useEffect (() => {
-        let encontrado = products.find ((prod) => prod.id === +id);
-        setProduct(encontrado);
-    }, [id]);
+  useEffect(() => {
+    let encontrado = products.find((prod) => prod.id === Number (id));
+    setProduct(encontrado);
+  }, [id]);
 
-    return (
-        <div>
-            <ItemDetail product= {product} />
-        </div>
-    )
+  return (
+    <div>
+      <ItemDetail product={product} />
+    </div>
+  );
 };
+
