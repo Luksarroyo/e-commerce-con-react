@@ -39,7 +39,7 @@ const ItemList = ({ items }) => {
               </Typography>
             </CardContent>
             <CardActions style={{ height: 50 }}>
-              <Link to={'/ItemDetail/${item.id}'}>
+              <Link to={`/itemDetail/${item.id}`}>
                 <Button variant="contained" size="small">
                   Comprar
                 </Button>
@@ -53,7 +53,3 @@ const ItemList = ({ items }) => {
 };
 
 export default ItemList;
-
-
-
-//dejo en 1:22
